@@ -13,6 +13,10 @@ const ListaDeJogosExclusivos = () => {
         )
     };
 
+    const handleLimparFiltro = () => {
+        setListaJogos(jogosExclusivos);
+    }
+
     return (
         <div className='container-principal'>
             <h2>Lista de Jogos Exclusivos</h2>
@@ -20,7 +24,9 @@ const ListaDeJogosExclusivos = () => {
                 <button onClick={() => handleFiltrarJogosPlataforma("xbox")}>XBOX</button>
                 <button onClick={() => handleFiltrarJogosPlataforma("playstation")}>PLAYSTATION</button>
                 <button onClick={() => handleFiltrarJogosPlataforma("nintendo")}>NINTENDO</button>
+                <button onClick={() => handleLimparFiltro()}>Limpar Filtro</button>
             </div>
+
             <div className='container-jogos'>
                 {listaJogos.map((jogo) => (
                     <ItemJogos

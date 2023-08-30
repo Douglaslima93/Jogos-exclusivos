@@ -1,10 +1,11 @@
 import './App.css'
+import ListaDeJogosExclusivos from './componentes/ListaJogosExclusivos'
 
 function App() {
 
   return (
-   <div>
-
+   <div className='App'>
+      <ListaDeJogosExclusivos/>
    </div>
 
   )
