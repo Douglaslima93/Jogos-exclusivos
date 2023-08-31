@@ -1,31 +1,27 @@
 import './style.css';
 import ItemJogos from "../ItemJogos";
 import { useState } from 'react';
-import { jogosExclusivos } from '../../dados';
+import { filtrarJogo, buscarJogo, retornarJogos } from '../../servico';
 import Lupa from '../../assets/img/lupa.png'
 
 const ListaDeJogosExclusivos = () => {
     
-    const [listaJogos, setListaJogos] = useState(jogosExclusivos);
+    const [listaJogos, setListaJogos] = useState(retornarJogos());
     const [textoBusca, setTextoBusca] = useState("");
 
     const handleFiltrarJogosPlataforma = (plataforma) => {
-        setListaJogos(
-            jogosExclusivos.filter((jogo) => jogo.plataforma === plataforma))
-            setTextoBusca("");
+        setListaJogos(filtrarJogo(plataforma));
+        setTextoBusca("");
     };
 
     const handleLimparFiltro = () => {
-        setListaJogos(jogosExclusivos);
+        setListaJogos(retornarJogos());
         setTextoBusca("");
     };
 
     const handleBuscarJogo = (textoDigitado) => {
         setTextoBusca(textoDigitado);
-        setListaJogos(jogosExclusivos.filter((jogo) => 
-        jogo.nome.toLowerCase().includes(textoDigitado.toLowerCase()) || 
-        jogo.plataforma.toLowerCase().includes(textoDigitado.toLowerCase()))
-        );
+        setListaJogos(buscarJogo(textoDigitado));
     };
 
     return (
