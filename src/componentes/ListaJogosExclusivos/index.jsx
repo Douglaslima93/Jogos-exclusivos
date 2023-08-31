@@ -2,20 +2,31 @@ import './style.css';
 import ItemJogos from "../ItemJogos";
 import { useState } from 'react';
 import { jogosExclusivos } from '../../dados';
+import Lupa from '../../assets/img/lupa.png'
 
 const ListaDeJogosExclusivos = () => {
     
     const [listaJogos, setListaJogos] = useState(jogosExclusivos);
+    const [textoBusca, setTextoBusca] = useState("");
 
     const handleFiltrarJogosPlataforma = (plataforma) => {
         setListaJogos(
-            jogosExclusivos.filter((jogo) => jogo.plataforma === plataforma)
-        )
+            jogosExclusivos.filter((jogo) => jogo.plataforma === plataforma))
+            setTextoBusca("");
     };
 
     const handleLimparFiltro = () => {
         setListaJogos(jogosExclusivos);
-    }
+        setTextoBusca("");
+    };
+
+    const handleBuscarJogo = (textoDigitado) => {
+        setTextoBusca(textoDigitado);
+        setListaJogos(jogosExclusivos.filter((jogo) => 
+        jogo.nome.toLowerCase().includes(textoDigitado.toLowerCase()) || 
+        jogo.plataforma.toLowerCase().includes(textoDigitado.toLowerCase()))
+        );
+    };
 
     return (
         <div className='container-principal'>
@@ -25,6 +36,16 @@ const ListaDeJogosExclusivos = () => {
                 <button onClick={() => handleFiltrarJogosPlataforma("playstation")}>PLAYSTATION</button>
                 <button onClick={() => handleFiltrarJogosPlataforma("nintendo")}>NINTENDO</button>
                 <button onClick={() => handleLimparFiltro()}>Limpar Filtro</button>
+            </div>
+
+            <div className='container-input'>
+                <img src={Lupa} alt='icone'/>
+                <input
+                type='text'
+                value={textoBusca}
+                onChange={(event) => handleBuscarJogo(event.target.value)}
+                placeholder='Pesquise um jogo ou plataforma'
+                />
             </div>
 
             <div className='container-jogos'>
