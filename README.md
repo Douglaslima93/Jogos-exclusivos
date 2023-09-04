@@ -1,6 +1,6 @@
 # Jogos Exclusivos
 
-## <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+## Tecnologia: <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
 
 ## Jogos exclusivos, é um web site para mostrar as funcionalidades de trabalhar com coleção de dados tipo Array, e também utilizar Array.map e Array.filter. Através destas funcionalidades podemos pesquisar os jogos clicando em cima do botão da plataforma do jogo ou através da pesquisa, assim localizar o jogo desejado.
 - Array.map é uma função nativa do JavaScript, o que significa que ela não precisa de importação, e pode ser usada diretamente.
