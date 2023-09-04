@@ -4,20 +4,81 @@
     justify-content: center;
     align-items: center;
     max-width: 768px;
-    margin: 0 auto;
+    margin: 50px auto;
     gap: 30px;
     text-align: center;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.container-principal h2 {
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: 5px solid transparent;
+}
+
+.container-principal h2:hover {
+    border-bottom: 5px solid #212190;
 }
 
 .container-btns {
     display: flex;
     flex-wrap: wrap;
-    max-width: 425px;
+    max-width: 468px;
     gap: 10px;
-    width: 100%;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #212190;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+}
+
+.container-btns button {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.container-btns button:hover {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
 }
 
 .container-input {
+    background-color: #212190;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5px;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+}
 
+.container-input img {
+    width: 50px;
+    height: 50px;
+}
+
+.container-input input {
+    width: 80%;
+    padding: 5px 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+}
+
+.container-input input:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.container-jogos {
+    width: 100%;
 }
