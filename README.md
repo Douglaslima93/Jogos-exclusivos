@@ -12,7 +12,7 @@
 - Utilizar as funções nativas .map e .filter .
 - Responsivo.
 
-## Oque aprendi
+## Oque aprendi.
 - Coloquei em pratica as funcionalidades de coleção de dados tipo array, e também a utilizar as funções nativas map e filter, assim pude filtrar e selecionar os objetos dentro da coleção de dados.
 
 ### ![Alt text](public/imagem1.png)
